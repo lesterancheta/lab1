@@ -27,9 +27,9 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => '',
+        'username'     => 'root',
         'password'     => '',
-        'database'     => '',
+        'database'     => 'lab1',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -45,18 +45,15 @@ class Database extends Config
         'numberNative' => false,
     ];
 
-    /**
-     * This database connection is used when
-     * running PHPUnit database tests.
-     */
+    
     public array $tests = [
         'DSN'         => '',
         'hostname'    => '127.0.0.1',
-        'username'    => '',
+        'username'    => 'root',
         'password'    => '',
-        'database'    => ':memory:',
+        'database'    => 'lab1',
         'DBDriver'    => 'SQLite3',
-        'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
+        'DBPrefix'    => 'db_', 
         'pConnect'    => false,
         'DBDebug'     => true,
         'charset'     => 'utf8',

@@ -16,7 +16,7 @@ class ProductController extends BaseController
     public function create()
     {
         $categoryModel = new CategoryLaptopModel();
-        $data['categories'] = $categorLModel->findAll();
+        $data['categories'] = $categoryModel->findAll();
         return view('product/create', $data);
     }
 
@@ -26,7 +26,7 @@ class ProductController extends BaseController
         $data = [
             'ProductName' => $this->request->getPost('ProductName'),
             'ProductDescription' => $this->request->getPost('ProductDescription'),
-            'Laptop_Category' => $this->request->getPost('Laptop_Category'),
+            'Laptop_Category_id' => $this->request->getPost('Laptop_Category_id'),
             'ProductQuantity' => $this->request->getPost('ProductQuantity'),
             'ProductPrice' => $this->request->getPost('ProductPrice'),
         ];
@@ -50,7 +50,7 @@ class ProductController extends BaseController
         $data = [
             'ProductName' => $this->request->getPost('ProductName'),
             'ProductDescription' => $this->request->getPost('ProductDescription'),
-            'Laptop_Category' => $this->request->getPost('Laptop_Category'),
+            'Laptop_Category_id' => $this->request->getPost('Laptop_Category_id'),
             'ProductQuantity' => $this->request->getPost('ProductQuantity'),
             'ProductPrice' => $this->request->getPost('ProductPrice'),
         ];

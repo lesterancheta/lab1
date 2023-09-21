@@ -13,7 +13,7 @@ class CategoryLaptopModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id', 'name'];
+    protected $allowedFields    = [ 'name'];
 
     // Dates
     protected $useTimestamps = false;

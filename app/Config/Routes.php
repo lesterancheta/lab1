@@ -6,6 +6,8 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'ProductController::index');
-$routes->get('products/create', 'ProductController::create');
-$routes->post('producs/store', 'ProductController::store');
-$routes->get('products/edit/(:num)', 'ProductController::store');
+$routes->get('product/create', 'ProductController::create');
+$routes->post('product/store', 'ProductController::store');
+$routes->get('product/edit/(:num)', 'ProductController::edit/$1');
+$routes->post('product/update/(:num)', 'ProductController::update/$1');
+$routes->get('product/delete/(:num)', 'ProductController::delete/$1');
